@@ -9,8 +9,6 @@ public class Birthday {
 		
 		int n = 2;
 		boolean zeroFive = false;				// Initiating values	
-														
-			
 			
 		while (!zeroFive) {							
 			
@@ -27,9 +25,6 @@ public class Birthday {
 		
 		}
 		
-						
-	
-	
 	
 	/**
 	* returns the probability for at least 2 of N to have the same birthday
@@ -54,8 +49,5 @@ public class Birthday {
 		return twoMin;
 		
 		}
-	
-
-		
-															
+													
 }
