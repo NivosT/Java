@@ -17,7 +17,7 @@ public class Birthday {
 			n++;
 			
 			}
-									// Fixes n value for actual vinal result - for the output
+									// Fixes n value for actual final result - for the output
 		n--;											
 		
 		
