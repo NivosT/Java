@@ -9,7 +9,7 @@ public class Calendar {
 		int getYear = Integer.parseInt(args[0]);		// Initiating values
 		String whatYear = "";
 		
-		if (isLeapYear(getYear)) {						// Sets string regarding type of year
+		if (isLeapYear(getYear)) {				// Sets string regarding type of year
 			whatYear = "leap";
 		}
 		else {
@@ -18,7 +18,7 @@ public class Calendar {
 	
 		String output = ("Year " + getYear + " is a " + whatYear + " year");
 		
-		for (int i = 1; i<=12; i++) {					// Builds up output string with month && days no. 
+		for (int i = 1; i<=12; i++) {				// Builds up output string with month && days no. 
 			int month = i;
 			output += ("\nMonth " + month + " has " + nDaysInMonth(month, getYear) + " days");
 		}
@@ -33,8 +33,8 @@ public class Calendar {
 	* @return - true/false regarding given year
 	**/
 	private static boolean isLeapYear(int year) {
-														// true  - leap year
-														// false - common year
+									// true  - leap year
+									// false - common year
 		 boolean isLeap = ((year % 4 == 0) && !(year % 100 == 0)) || (year % 400 == 0);
 		 
 		 return isLeap;
@@ -57,19 +57,19 @@ public class Calendar {
 			case 3:
 			case 5:
 			case 7:
-			case 8:										// Months with always 31 days
+			case 8:						// Months with always 31 days
 			case 10:
 			case 12:
 				numDays = 31;
 				break;
 			case 4:
 			case 6:
-			case 9:										// Months with always 30 days
+			case 9:						// Months with always 30 days
 			case 11:
 				numDays = 30;
 				break;
 				case 2:
-					if (isLeapYear(year)) {				// Considers leap/not for February
+					if (isLeapYear(year)) {		// Considers leap/not for February
 						numDays = 29;
 					}
 					else {
