@@ -1,9 +1,4 @@
 /**
-* Assignment number: 3.3
-* File name: StringOps.java
-* Name: Niv Tennenbaum
-* Student ID: 312458904
-* Email: niv.tennenbaum@post.idc.ac.il
 *
 * A few functions to perform numerous string operations
 */
@@ -64,7 +59,7 @@ public class StringOps {
 		String concatString = "";
 		
 		for (int i = 0; i <= (arr.length) - 1; i++  ) {
-				concatString += arr[i];				// Builds up string from each entry
+				concatString += arr[i];		// Builds up string from each entry
 			}
 		
 	    return concatString;
@@ -81,19 +76,19 @@ public class StringOps {
 		int trimStart = 0;
 		int trimEnd = 0;
 		
-		while (str.charAt(cursor) == c ) { 			// Counts the beginning set to trim
+		while (str.charAt(cursor) == c ) { 		// Counts the beginning set to trim
 			trimStart++;
 			cursor++;
 		}
 		
 		cursor = (str.length() - 1);
-		while (str.charAt(cursor) == c ) { 			// Counts the end set to trim
+		while (str.charAt(cursor) == c ) { 		// Counts the end set to trim
 				trimEnd++;
 				cursor--;
 		}
 		
 		String trimString = str.substring(trimStart, (str.length() - trimEnd));
-													// Sets new string with calculated amounts to remove
+								// Sets new string with calculated amounts to remove
 		return trimString;
 	}
 	
@@ -108,12 +103,12 @@ public class StringOps {
 		int runCount = 0;
 		
 		for (int i = 0; i <= (str.length() - 1); i++) {
-			if (str.charAt(i) == c) {				// Runs through the given string
-				runCount++;							// Counts when reaching given char
+			if (str.charAt(i) == c) {		// Runs through the given string
+				runCount++;			// Counts when reaching given char
 				
 				while (i <= (str.length() - 1) && str.charAt(i) == c) {
-					i++;							// For joint chars with same value:
-				}									// Continuing the char flow through the str without extra counts
+					i++;			// For joint chars with same value:
+				}				// Continuing the char flow through the str without extra counts
 			}
 		}
 		return runCount;
@@ -131,9 +126,9 @@ public class StringOps {
 		int arrCursor = 0;
 		
 		for (int i = 0; i <= (str.length() - 1); i++) {
-													// Runs through the given string
+								// Runs through the given string
 			if (str.charAt(i) != separator) {
-				tokens[arrCursor] = "";				// Collects char values that are not whitespaces (char 32)
+				tokens[arrCursor] = "";		// Collects char values that are not whitespaces (char 32)
 									
 				while (i <= (str.length() - 1) && str.charAt(i) != separator) {
 					tokens[arrCursor] += str.charAt(i);
@@ -151,8 +146,8 @@ public class StringOps {
 	public static String removeChar(String s, char c) {
 		
 		String output = concat(tokenize(s, (char) 32 ));
-													// Uses tokenize() to set the given string as a "tokens" array
-													// Uses concat() to combine the "tokens" to one string
+								// Uses tokenize() to set the given string as a "tokens" array
+								// Uses concat() to combine the "tokens" to one string
 	    return output;
 	}
 }
