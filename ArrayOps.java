@@ -1,10 +1,4 @@
 /** 
-* Assignment number: 3.2
-* File name: ArrayOps.java
-* Name: Niv Tennenbaum
-* Student ID: 312458904
-* Email: niv.tennenbaum@post.idc.ac.il
-*
 * Performs various array operations
 */
 public class ArrayOps {
@@ -35,17 +29,17 @@ public class ArrayOps {
 	 */
 	public static int[] maxArr(int[] a, int[] b) {
 
-		int[] maxArr = new int[Math.max(a.length, b.length)];				// Define new array, num of elements as the bigger set
+		int[] maxArr = new int[Math.max(a.length, b.length)];			// Define new array, num of elements as the bigger set
 																			// If sets are equal, that would be the amount
 		for (int i = 0; i <= (Math.min(a.length, b.length) - 1); i++) { 
-			maxArr[i] = Math.max(a[i], b[i]);								// Assigns to new array a corresponding element
+			maxArr[i] = Math.max(a[i], b[i]);				// Assigns to new array a corresponding element
 		}																	// the bigger one
 																			// stops at last element of shorter set
 		int[] bigSet = a;
 		int[] smallSet = b;
 		if (b.length > a.length) {
 			bigSet = b;
-			smallSet = a;													// Defining the bigger/smaller arrays
+			smallSet = a;							// Defining the bigger/smaller arrays
 		}																	
 																			
 		for (int j = (smallSet.length); j <= (bigSet.length - 1); j++) {	// copying the rest of the big array to new array
