@@ -1,10 +1,4 @@
 /** 
-* Assignment number: 3.1
-* File name: Calendar.java
-* Name: Niv Tennenbaum
-* Student ID: 312458904
-* Email: niv.tennenbaum@post.idc.ac.il
-*
 * Handles calendars and calendric calculations.
 */
 public class Calendar {	
@@ -27,9 +21,8 @@ public class Calendar {
 		int nSundaysOnFirstOfMonth = 0;
 		
 		// Advances the date and the day-of-the-week throughout the 20th century.
-	    // Counts Sundays that fell of the first of the month.
+	    	// Counts Sundays that fell of the first of the month.
 		
-		// Implementation tip: except for nSundaysOnFirstOfMonth, this function has no local variables.
 		// All the variables that it uses are the static variables defined at the class level.  
 		
 		while (year < 2001) {
@@ -51,11 +44,11 @@ public class Calendar {
 		dayOfWeek++;									
 		dayOfMonth++;
 		
-		if (dayOfWeek == 8) {							// Resets week count
+		if (dayOfWeek == 8) {					// Resets week count
 			dayOfWeek = 1;
 		}
 		
-		if (dayOfMonth > nDaysInMonth) {				// Resets month count
+		if (dayOfMonth > nDaysInMonth) {			// Resets month count
 			month++;
 			dayOfMonth = 1;
 			if (month == 13) {
@@ -83,19 +76,19 @@ public class Calendar {
 			case 3:
 			case 5:
 			case 7:
-			case 8:										// Months with always 31 days
+			case 8:						// Months with always 31 days
 			case 10:
 			case 12:
 				numDays = 31;
 				break;
 			case 4:
 			case 6:
-			case 9:										// Months with always 30 days
+			case 9:						// Months with always 30 days
 			case 11:
 				numDays = 30;
 				break;
 			case 2:
-				if (isLeapYear(year)) {				// Considers leap/not for February
+				if (isLeapYear(year)) {			// Considers leap/not for February
 					numDays = 29;
 				}
 				else {
