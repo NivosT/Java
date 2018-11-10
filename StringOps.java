@@ -145,7 +145,7 @@ public class StringOps {
 	 */
 	public static String removeChar(String s, char c) {
 		
-		String output = concat(tokenize(s, (char) 32 ));
+		String output = concat(tokenize(s, c));
 								// Uses tokenize() to set the given string as a "tokens" array
 								// Uses concat() to combine the "tokens" to one string
 	    return output;
