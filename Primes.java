@@ -1,12 +1,6 @@
 import java.util.Arrays;
 
 /**
-* Assignment number: 4.2
-* File name: Primes.java
-* Name: Niv Tennenbaum
-* Student ID: 312458904
-* Email: niv.tennenbaum@post.idc.ac.il
-*
 * Applies the Eratosthenes algorithm to all numbers from 2 to N (received as args[0]
 * Prints all found primes up to N
 */
