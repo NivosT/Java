@@ -14,7 +14,7 @@ public class CodeOps {
 	
 		if (args.length == 2) {
 			int key = Integer.parseInt(args[1]); // Case of given key
-			key %= ALPHABET_SIZE; // ensures key length is set for one iteration 
+			key %= ALPHABET_SIZE; // Ensures key length is set for one iteration 
 			
 			String encodedText = encode(getText, key); // Encode
 			System.out.println("\n" + "Encoded: " + encodedText); 
