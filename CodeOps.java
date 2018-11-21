@@ -8,22 +8,23 @@ public class CodeOps {
 	static final int ALPHABET_SIZE = 26; // 26 letters in the English language
 	
 	public static void main(String[] args) {
-		// Initializing vars
-		String getText = args[0];
-		String decodedText;
-	
-		if (args.length == 2) {
-			int key = Integer.parseInt(args[1]); // Case of given key
-			key %= ALPHABET_SIZE; // Ensures key length is set for one iteration 
-			
-			String encodedText = encode(getText, key); // Encode
-			System.out.println("\n" + "Encoded: " + encodedText); 
-			decodedText = decode(encodedText, key); // Decode
+		if(arga.length > 0) {
+			String text = args[0];
+			if(args.length == 1) {
+				// If user gave one argument, try to find key and decode.
+				System.out.println("\n" + "Decoded: " + decode(text));
+			} else if (args.length > 1) {
+				// If user gave at least two arguments, prints encode & decode.
+				int key = Integer.parseInt(args[1]);
+				key %= ALPHABET_SIZE; // Ensures key length is set for one iteration 
+				System.out.println("\n" + "Encoded: " + encode(text, key)); 
+				System.out.println("\n" + "Decoded: " + decode(text, key));
+			}
+		} else {
+			System.out.println("No parameters given.");
+			return 0;
 		}
-		else {
-			decodedText = decode(getText); // Case of no key - try to only decode
-		}
-		System.out.println("\n" + "Decoded: " + decodedText);
+		return 1;
 	}
 	/*
 	 * Adds to each char of the given String the value of the key, loops back to 'a' if passes 'z'
