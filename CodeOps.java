@@ -1,10 +1,4 @@
 /** 
-* Assignment number: 4.4
-* File name: CodeOps.java
-* Name: Niv Tennenbaum
-* Student ID: 312458904
-* Email: niv.tennenbaum@post.idc.ac.il
-*
 * Encodes and decodes strings based on "Cycle shift encoding" technique
 * Given text, key (string, int) as args (in this order) - encodes && decodes based on key
 * Given text (string) as args[0] - searches for a key and decodes
